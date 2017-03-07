@@ -1,0 +1,193 @@
+/***************
+ * 页面样式
+ ***************/
+
+ /*	==========
+	基本默认值
+	==========	*/
+
+html {
+	font-size: 62.5%;
+	color: #222;
+}
+
+body {
+	font-size: 1.2rem;
+	line-height: 1.5;
+	background: #f7f7f7;
+}
+
+a {
+	color: #666;
+	text-decoration: none;
+}
+
+a:hover,a:active {
+	color: #0ae;
+	text-decoration: underline;
+}
+
+/*替代浏览器默认选中文本样式*/
+::selection {
+	background-color: #b3d4fc;
+	text-shadow: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+/*	============
+	添加工具样式
+	============*/
+
+//在父元素中居中显示
+.center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}	
+
+.pull-right {
+	float: right !important;
+}
+
+.pull-left {
+	float: left !important;
+}
+
+.text-left {
+	text-align: left !important;
+}
+
+.text-right {
+	text-align: right !important;
+}
+
+.text-center {
+	text-align: center !important;
+}
+
+.hide {
+	display: none !important;
+}
+
+.show {
+	display: block !important;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.text-hide {
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+}
+
+//清除浮动
+.clearfix() {
+	&:before,
+  	&:after {
+    	content: " ";
+	    display: table;
+  	}
+  	&:after {
+	    clear: both;
+  	}
+}
+
+/*头部样式*/
+.index-header {
+	width: 100%;
+	.top {
+		.clearfix();
+		line-height: 30px;
+		padding: 0 1.5rem;
+		color: #fff;
+		background: #555;
+		border-bottom: 1px solid #ecc000;
+		.tel {
+			float: left;
+		}
+		ul{
+			text-align: right;
+			li {
+				display: inline-block;
+				a {
+					display: inline-block;
+					padding: 0 1.5rem;
+					color: #fff;
+				}
+			}
+			//设置带边框线的链接
+			li + li {
+				border-left: 1px solid #999;
+				margin-left: -3px;
+			}
+		}
+	}
+	.main {
+		padding: 0;
+		.clearfix();
+		.brand {
+			float: left;
+			padding: 1rem 1.5rem;
+		}
+		ul {
+			text-align: right;
+			li {
+				display: inline-block;
+				border-left: 1px solid #f0ede9;
+				a {
+					display: inline-block;
+					padding: 0 3rem;
+					line-height: 5.5rem;
+					font-size: 1.6rem;
+					font-weight: bold;
+					color: #7c7a65;
+					text-decoration: none;
+				}
+				a:hover,a:active {
+					color: #ffb300;
+					background: #f8f6f1;
+				}
+
+			}
+		}
+	}
+}
+
+/*网站主要内容*/
+.container {
+	width: 100%;
+}
+
+/*网站页脚*/
+.index-footer {
+	width: 100%;
+	padding: 3rem 0 5rem;
+	background: #ededed;
+	ul{
+		text-align: center;
+		li {
+			display: inline-block;
+			.icon {
+				display: inline-block;
+				text-indent: -999rem;
+				margin-right: 1.5rem;
+				background: url('../img/jebmKcbrh.png') no-repeat;
+				background-size: 466px 447px;
+				overflow: hidden;
+			}
+		}
+	}
+}
