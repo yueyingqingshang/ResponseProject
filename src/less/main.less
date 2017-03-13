@@ -149,7 +149,7 @@ li {
 				border-left: 1px solid #f0ede9;
 				a {
 					display: inline-block;
-					padding: 0 3rem;
+					padding: 0 2.5rem;
 					line-height: 5.5rem;
 					font-size: 1.6rem;
 					font-weight: bold;
@@ -506,22 +506,35 @@ li {
 	}
 }
 
+//媒体查询的相对单位：1rem = 16px;
 /*媒体查询样式*/
-@media only screen and (max-width: 800px){
+//头部导航栏媒体查询
+@media only screen and (max-width: 50em){
 	.index-header {
 		.top {
-			background: green;
-		}
-	}
-}
-
-@media only screen and (min-width: 481px) and (max-width: 800px){
-	.index-header {
-		.top {
+			
 			ul {
 				li {
 					a {
-						color: red;
+						padding: 0 1rem;
+					}
+				}
+			}
+		}
+		.main {
+			.brand {
+				float: none;
+				display: block;
+				padding: 0;
+				margin: 1.5rem auto 0.5rem;
+				text-align: center;
+			}
+			ul {
+				text-align: center;
+				li {
+					border: none;
+					a {
+						padding: 0 1.5rem;
 					}
 				}
 			}
@@ -529,15 +542,150 @@ li {
 	}
 }
 
-@media only screen and (max-width: 480px){
+@media only screen and (min-width: 30.0625em) and (max-width: 50em){
 	.index-header {
 		.top {
+			.tel {
+				display: none;
+			}
+			ul {
+				li:nth-child(4) {
+					display: none;
+				}
+			}
+		}
+		.main {
 			ul {
 				li {
+					line-height: 3rem;
 					a {
-						color: blue;
+						font-weight: normal;
+						padding: 0 0.5rem;
 					}
 				}
+				li:first-child {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 30em){
+	.index-header {
+		.top {
+			.tel {
+				display: none;
+			}
+			ul {
+				li:nth-child(3),li:nth-child(4) {
+					display: none;
+				}
+			}
+		}
+		.main {
+			ul {
+				li {
+					line-height: 3rem;
+					a {
+						font-weight: normal;
+						padding: 0 0.5rem;
+					}
+				}
+				li:first-child {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+//网站主要内容媒体查询样式
+@media only screen and(max-width: 50em) {
+	.container {
+		.transaction {
+			.trans-content {
+				.trans-data {
+					padding: 0.5rem;
+					span {
+						font-size: 1.2rem;
+					}
+					.trans-money {
+						font-size: 1.6rem;
+						margin: 0;
+						padding: 0;
+						letter-spacing: inherit;
+						box-shadow: none;	
+						background: transparent;
+					}
+				}
+				.trans-report {
+					font-size: 1.2rem;
+				}
+			}
+		}
+		.feature {
+			.item {
+				h3,p {
+					display: block;
+					width: 100%;
+					font-size: 2.6rem;
+					text-align: center;
+				}
+				p {
+					font-size: 1.2rem;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and(min-width: 30.0625em) and (max-width: 50em) {
+	.container {
+		.transaction {
+			padding: 0.5rem 0;
+			.trans-content {
+				.trans-data,
+				.trans-report {
+					float: none;
+					text-align: center;
+				}
+				.trans-report {
+					a {
+						padding: 0
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and(max-width: 30em) {
+	.container {
+		.transaction {
+			padding: 0;
+			.trans-content {
+				.trans-data,
+				.trans-report {
+					float: none;
+					text-align: center;
+				}
+				.trans-report {
+					a {
+						padding: 0
+					}
+				}
+			}
+		}
+		.feature {
+			width: 96%;
+			margin: 1rem auto;
+			.item {
+				display: block;
+				width: auto;
+			}
+			.item + .item {
+				margin: 1rem 0 0;
 			}
 		}
 	}

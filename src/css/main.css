@@ -134,7 +134,7 @@ li {
 }
 .index-header .main ul li a {
   display: inline-block;
-  padding: 0 3rem;
+  padding: 0 2.5rem;
   line-height: 5.5rem;
   font-size: 1.6rem;
   font-weight: bold;
@@ -514,18 +514,127 @@ li {
   color: #999;
 }
 /*媒体查询样式*/
-@media only screen and (max-width: 800px) {
-  .index-header .top {
-    background: green;
+@media only screen and (max-width: 50em) {
+  .index-header .top ul li a {
+    padding: 0 1rem;
+  }
+  .index-header .main .brand {
+    float: none;
+    display: block;
+    padding: 0;
+    margin: 1.5rem auto 0.5rem;
+    text-align: center;
+  }
+  .index-header .main ul {
+    text-align: center;
+  }
+  .index-header .main ul li {
+    border: none;
+  }
+  .index-header .main ul li a {
+    padding: 0 1.5rem;
   }
 }
-@media only screen and (min-width: 481px) and (max-width: 800px) {
-  .index-header .top ul li a {
-    color: red;
+@media only screen and (min-width: 30.0625em) and (max-width: 50em) {
+  .index-header .top .tel {
+    display: none;
+  }
+  .index-header .top ul li:nth-child(4) {
+    display: none;
+  }
+  .index-header .main ul li {
+    line-height: 3rem;
+  }
+  .index-header .main ul li a {
+    font-weight: normal;
+    padding: 0 0.5rem;
+  }
+  .index-header .main ul li:first-child {
+    display: none;
   }
 }
-@media only screen and (max-width: 480px) {
-  .index-header .top ul li a {
-    color: blue;
+@media only screen and (max-width: 30em) {
+  .index-header .top .tel {
+    display: none;
+  }
+  .index-header .top ul li:nth-child(3),
+  .index-header .top ul li:nth-child(4) {
+    display: none;
+  }
+  .index-header .main ul li {
+    line-height: 3rem;
+  }
+  .index-header .main ul li a {
+    font-weight: normal;
+    padding: 0 0.5rem;
+  }
+  .index-header .main ul li:first-child {
+    display: none;
+  }
+}
+@media only screen and (max-width: 50em) {
+  .container .transaction .trans-content .trans-data {
+    padding: 0.5rem;
+  }
+  .container .transaction .trans-content .trans-data span {
+    font-size: 1.2rem;
+  }
+  .container .transaction .trans-content .trans-data .trans-money {
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+    letter-spacing: inherit;
+    box-shadow: none;
+    background: transparent;
+  }
+  .container .transaction .trans-content .trans-report {
+    font-size: 1.2rem;
+  }
+  .container .feature .item h3,
+  .container .feature .item p {
+    display: block;
+    width: 100%;
+    font-size: 2.6rem;
+    text-align: center;
+  }
+  .container .feature .item p {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 30.0625em) and (max-width: 50em) {
+  .container .transaction {
+    padding: 0.5rem 0;
+  }
+  .container .transaction .trans-content .trans-data,
+  .container .transaction .trans-content .trans-report {
+    float: none;
+    text-align: center;
+  }
+  .container .transaction .trans-content .trans-report a {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .container .transaction {
+    padding: 0;
+  }
+  .container .transaction .trans-content .trans-data,
+  .container .transaction .trans-content .trans-report {
+    float: none;
+    text-align: center;
+  }
+  .container .transaction .trans-content .trans-report a {
+    padding: 0;
+  }
+  .container .feature {
+    width: 96%;
+    margin: 1rem auto;
+  }
+  .container .feature .item {
+    display: block;
+    width: auto;
+  }
+  .container .feature .item + .item {
+    margin: 1rem 0 0;
   }
 }
